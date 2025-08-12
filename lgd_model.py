@@ -1,25 +1,10 @@
-'''
-1.) Gather data and convert to a dataframe
-2.) Choose our target data column and assign it "y" by convention
-3.) Choose our "features" of which our output will be functions of and assign "x" as convention
-4.) Use our features to create an equation or algorithm to predict "y"
-5.) Adjust our equation untill the cross entropy has been minimised
-6.) You now have your data science ystem
-7.) Automate this to make an ML algorithm.
-'''
-
-'''
-train_test_split from sklearn.model_selection splits your features and target sets into "training" and "testing" sets by an assigned ratio
-'''
-
 import pandas as pd
 from sklearn.metrics import mean_absolute_error 
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeRegressor
 
 """
-Task 1 - You work for a bank and need to predict the expected monetary loss from a loan, given the client's details.
-Cleaning tasks:
+Task 1 - Create a simple decision tree regressor model to predict the loss given default for a borrower
     * Remove duplicate rows
     * Remove duplicate loan_amount column
     * Drop rows with NaN values
