@@ -96,7 +96,7 @@ This function tries different values of max leaf nodes to find the optimum using
 Creating its model ensures we don't test one model once, resulting in overfitting.
 This is important for building confidence in our final model.
 """
-def calculate_min_mae(max_leaf_nodes, test_x, test_y):
+def calculate_mae(max_leaf_nodes, test_x, test_y):
 
     model = DecisionTreeRegressor(max_leaf_nodes = max_leaf_nodes, random_state = 1)
     model.fit(test_x, test_y)
