@@ -31,7 +31,7 @@ df1 = client_df.drop_duplicates()
 # drop unnecessary columns
 df2 = df1.drop('region', axis = 1)
 # fill empty elements with mean of their culumn using a series
-df3 = df2.fillna(df2.median())
+df3 = df2.fillna(df2.median(numeric_only = True))
 
 # assign the features and the target fpor the model (x and y respectively)
 features = ['annual_income', 'loan_amount', 'interest_rate', 'credit_score', 'employment_years', 'loan_amount_dup']
